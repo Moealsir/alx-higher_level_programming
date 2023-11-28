@@ -10,8 +10,8 @@ if last_digit == 0:
     print(p0.format(number, last_digit))
 elif last_digit < 6 and last_digit != 0:
     if last_digit < 0:
-        print(pn)
+        print(pn.format(number, last_digit))
     else:
-        print(pp)
+        print(pp.format(number, last_digit))
 else:
     print(pg.format(number, last_digit))
