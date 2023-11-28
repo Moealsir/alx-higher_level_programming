@@ -3,4 +3,4 @@ for i in range(99):
     if i < 98:
         print("{:02d}".format(i), end=", ")
     else:
-        print("{:02d}".format(i), end="\n")
+        print("{:02d}".format(i), end="")
