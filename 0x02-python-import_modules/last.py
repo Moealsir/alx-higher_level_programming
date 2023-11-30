@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ") 
+print("ABCDEFGHIJKLMNOP", end='')
+print("QRSTUVWXYZ") 
