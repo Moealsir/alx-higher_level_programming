@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from calculator_1 import add
+    from calculator_1 import add, sub, mul, div
     import sys
     nargs = len(sys.argv) - 1
     if nargs != 3:
