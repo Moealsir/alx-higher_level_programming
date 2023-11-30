@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-import last
+if __name__ == "__main__":
+    import last
