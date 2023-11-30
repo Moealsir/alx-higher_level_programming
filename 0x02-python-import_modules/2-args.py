@@ -13,5 +13,5 @@ if __name__ == "__main__":
         i = 0
         for arg in sys.argv:
             if i != 0:
-            	print(f"{i}: {sys.argv[i]}")
+                print(f"{i}: {sys.argv[i]}")
             i += 1
