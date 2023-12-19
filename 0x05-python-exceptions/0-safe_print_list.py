@@ -5,9 +5,8 @@ def safe_print_list(my_list=[], x=0):
     for item in my_list:
         try:
             print("{}".format(my_list[item]), end='')
-        except Exception:
+        except:
             break
         else:
             counter += 1
-    print()
     return counter
