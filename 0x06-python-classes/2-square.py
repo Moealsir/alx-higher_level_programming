@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-    """a module define square class
+"""a module define square class
 
-    Raises:
-        TypeError: int size
-        ValueError: size >= 0
-    """
+Raises:
+    TypeError: int size
+    ValueError: size >= 0
+"""
 
 
 class Square:
@@ -22,7 +22,7 @@ class Square:
 
         Args:
             size (int): The size of the square. Defaults to 0.
-        
+
         Raises:
             TypeError: If size is not an integer.
             ValueError: If size is less than 0.
@@ -34,4 +34,3 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = size
-
