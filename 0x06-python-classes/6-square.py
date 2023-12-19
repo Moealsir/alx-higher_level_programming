@@ -12,6 +12,7 @@ class Square:
 
     Attributes:
         __size (int): The size of the square.
+        __position (tuple): The position of the square.
 
     Methods:
         area(): Calculate the area of the square.
