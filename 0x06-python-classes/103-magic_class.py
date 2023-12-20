@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 import math
+"""magic class
+
+Raises:
+    TypeError: TypeError
+"""
+
 
 class MagicClass:
     """
     A class that does magic
     """
-    
+
     def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
