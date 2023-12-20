@@ -73,6 +73,9 @@ class Node:
             raise TypeError("next_node must be a Node object or None")
         self.__next_node = value
 
+"""single linked list
+"""
+
 
 class SinglyLinkedList:
     """A class representing a singly linked list.
