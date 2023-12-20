@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""A module defining the Square class.
+"""a module for Square class.
 
-Raises:
-    TypeError: If size is not an integer.
-    ValueError: If size is less than 0.
+this module defines the class Square
 """
 
 
@@ -37,7 +35,6 @@ class Square:
             raise ValueError("size must be >= 0")
 
         elif (not isinstance(position, tuple) or
-              len(position) != 2 or
               position[0] < 0 or
               position[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
