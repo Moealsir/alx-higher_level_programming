@@ -87,8 +87,7 @@ class SinglyLinkedList:
     """
 
     def __init__(self):
-        """Initialize an empty singly linked list.
-        """
+        """Initialize an empty singly linked list."""
         self.head = None
 
     def __str__(self):
