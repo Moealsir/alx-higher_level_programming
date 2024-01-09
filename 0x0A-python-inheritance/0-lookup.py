@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+summary_
+"""
 def lookup(obj):
     """
     Function that returns the list of available attributes
