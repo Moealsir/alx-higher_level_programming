@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Class that defines the attributes of Geometric Shapes
+"""
+
+
 def is_same_class(obj, a_class):
     """
     Function that returns True/False if obj is a type of a_class
@@ -11,5 +16,5 @@ def is_same_class(obj, a_class):
         True if type of obj is a_class
         False, otherwise
     """
-    
+
     return type(obj) is a_class
