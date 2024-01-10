@@ -8,8 +8,8 @@ def class_to_json(obj):
     """
     whew
     """
-    
+
     res = {}
-    if hasattr(obj, "__dist__"):
-        res = obj.__dist__.copy()
-        return res
+    if hasattr(obj, "__dict__"):
+        res = obj.__dict__.copy()
+    return res
