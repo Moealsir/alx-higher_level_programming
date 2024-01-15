@@ -25,8 +25,8 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            self.__nb_objects += 1
-            self.id = type(self).__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
 
 
 if __name__ == "__main__":
