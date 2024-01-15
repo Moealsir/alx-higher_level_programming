@@ -1,19 +1,26 @@
 #!/usr/bin/python3
-
 """
-Base module
+Module for the Base class
 """
 
 
 class Base:
     """
-    Base - Add a brief here.
+    The Base class
+
+    Attributes:
+        __nb_objects (int): A private class attribute.
+        id (int): A public instance attribute.
     """
 
+    __nb_objects = 0
 
     def __init__(self, id=None):
         """
-        __init__ - Add a brief here.
+        Constructor for the Base class.
+
+        Args:
+            id (int, optional): An optional identifier.
         """
         if id is not None:
             self.id = id
