@@ -7,10 +7,6 @@ Module for the Base class
 class Base:
     """
     The Base class
-
-    Attributes:
-        __nb_objects (int): A private class attribute.
-        id (int): A public instance attribute.
     """
 
     __nb_objects = 0
@@ -18,9 +14,6 @@ class Base:
     def __init__(self, id=None):
         """
         Constructor for the Base class.
-
-        Args:
-            id (int, optional): An optional identifier.
         """
         if id is not None:
             self.id = id
