@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from base import Base
 """
 Rectangle(Base) module
 """
+from base import Base
 
 
 class Rectangle(Base):
