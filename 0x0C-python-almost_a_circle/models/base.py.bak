@@ -1,20 +1,11 @@
 #!/usr/bin/python3
 
-"""
-Base module
-"""
-
-
 class Base:
-    """
-    Base - Add a brief here.
-    """
 
+    __nb_objects = 0
 
     def __init__(self, id=None):
-        """
-        __init__ - Add a brief here.
-        """
+
         if id is not None:
             self.id = id
         else:
