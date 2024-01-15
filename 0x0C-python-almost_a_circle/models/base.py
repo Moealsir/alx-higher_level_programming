@@ -10,7 +10,6 @@ class Base:
     Base - Add a brief here.
     """
 
-
     def __init__(self, id=None):
         """
         __init__ - Add a brief here.
