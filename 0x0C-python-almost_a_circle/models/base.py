@@ -8,9 +8,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """
-        Constructor for the Base class.
-        """
+        """Constructor for the Base class."""
         if id is not None:
             self.id = id
         else:
