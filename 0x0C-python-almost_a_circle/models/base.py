@@ -1,13 +1,9 @@
 #!/usr/bin/python3
-"""
-Module for the Base class
-"""
+""" Module for the Base class """
 
 
 class Base:
-    """
-    The Base class
-    """
+    """ The Base class """
 
     __nb_objects = 0
 
