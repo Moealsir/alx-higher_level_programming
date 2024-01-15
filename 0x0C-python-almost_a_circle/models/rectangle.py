@@ -1,13 +1,33 @@
 #!/usr/bin/python3
+"""
+Module for the Rectangle class
+"""
+
 from base import Base
-"""Rectangle(Base) module"""
 
 
 class Rectangle(Base):
-    """Rectangle(Base) - Add a brief here."""
+    """
+    The Rectangle class
+
+    Attributes:
+        __width (int): Private attribute representing the width.
+        __height (int): Private attribute representing the height.
+        __x (int): Private attribute representing the x-coordinate.
+        __y (int): Private attribute representing the y-coordinate.
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """__init__ - Add a brief here."""
+        """
+        Constructor for the Rectangle class.
+
+        Args:
+            width (int): Width of the rectangle.
+            height (int): Height of the rectangle.
+            x (int, optional): x-coordinate of the rectangle. Defaults to 0.
+            y (int, optional): y-coordinate of the rectangle. Defaults to 0.
+            id (int, optional): Identifier for the instance. Defaults to None.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
@@ -16,13 +36,13 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """width - Add a brief here."""
+        """Getter method for __width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width - Add a brief here."""
-        if type(value) is not int:
+        """Setter method for __width"""
+        if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -30,13 +50,13 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """height - Add a brief here."""
+        """Getter method for __height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height - Add a brief here."""
-        if type(value) is not int:
+        """Setter method for __height"""
+        if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
@@ -44,12 +64,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """x - Add a brief here."""
+        """Getter method for __x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """x - Add a brief here."""
+        """Setter method for __x"""
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -58,14 +78,25 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """y - Add a brief here."""
+        """Getter method for __y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """y - Add a brief here."""
+        """Setter method for __y"""
         if not isinstance(value, int):
-            raise TypeError("y Must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(10, 2)
+    print(r1.id)
+
+    r2 = Rectangle(2, 10)
+    print(r2.id)
+
+    r3 = Rectangle(10, 2, 0, 0, 12)
+    print(r3.id)
