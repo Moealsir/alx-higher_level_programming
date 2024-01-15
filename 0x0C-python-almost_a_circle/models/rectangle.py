@@ -1,21 +1,10 @@
 #!/usr/bin/python3
-"""
-Module for the Rectangle class
-"""
-
+"""Module for the Rectangle class"""
 from base import Base
 
 
 class Rectangle(Base):
-    """
-    The Rectangle class
-
-    Attributes:
-        __width (int): Private attribute representing the width.
-        __height (int): Private attribute representing the height.
-        __x (int): Private attribute representing the x-coordinate.
-        __y (int): Private attribute representing the y-coordinate.
-    """
+    """The Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
@@ -89,14 +78,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-if __name__ == "__main__":
-
-    r1 = Rectangle(10, 2)
-    print(r1.id)
-
-    r2 = Rectangle(2, 10)
-    print(r2.id)
-
-    r3 = Rectangle(10, 2, 0, 0, 12)
-    print(r3.id)
