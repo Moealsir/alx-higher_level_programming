@@ -102,5 +102,5 @@ class Rectangle(Base):
             for attr, value in zip(attrs, args):
                 setattr(self, attr, value)
         elif kwargs:
-            for attr, value in kwargs.items():
+            for key, value in kwargs.items():
                 setattr(self, key, value)
