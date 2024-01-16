@@ -1,17 +1,16 @@
 #!/usr/bin/python3
+"""Base module"""
 import json
 import csv
 import os.path
-""" Module for the Base class """
 
 
 class Base:
-    """ The Base class """
+    """Base - Add a brief here."""
 
-    __nb_objects = 0
 
     def __init__(self, id=None):
-        """xConstructor for the Base class."""
+        """__init__ - Add a brief here."""
         if id is not None:
             self.id = id
         else:
@@ -27,7 +26,7 @@ class Base:
     @classmethod
 
     def save_to_file(cls, list_objs):
-        """save_to_file - Add a brief here"""
+        """save_to_file - Add a brief here."""
         filename = "{}.json".format(cls.__name__)
         list_dic = []
         if not list_objs:
