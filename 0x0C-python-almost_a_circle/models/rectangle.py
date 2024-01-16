@@ -94,20 +94,3 @@ class Rectangle(Base):
         """str"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
-
-    def update(self, *args):
-        """update"""
-        if args:
-            attrs = ["id", "width", "height", "x", "y"]
-            for attr, value in zip(attrs, args):
-                setattr(self, attr, value)
-
-if __name__ == "__main__":
-
-    r1 = Rectangle(3, 5, 1)
-    r1_dictionary = r1.to_dictionary()
-    r2 = Rectangle.create(**r1_dictionary)
-    print(r1)
-    print(r2)
-    print(r1 is r2)
-    print(r1 == r2)
