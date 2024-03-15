@@ -9,10 +9,10 @@ def main():
 		sys.exit(1)
 	username, password, database = sys.argv[1:]
 	conn = MySQLdb.connect(host='localhost',
-                        user=username,
-                        password=password,
-                        db=database,
-                        port='3306')
+                        user='root',
+                        password='1111',
+                        db=database
+                        )
 	cur = conn.cursor()
 	cur.execute("SELECT * FROM states")
 	items = cur.fetchall()
