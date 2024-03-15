@@ -16,7 +16,8 @@ def main():
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM states \
-            ORDER BY id ASC")
+				ORDER BY id ASC"
+    )
     items = cur.fetchall()
     for item in items:
         print(item)
