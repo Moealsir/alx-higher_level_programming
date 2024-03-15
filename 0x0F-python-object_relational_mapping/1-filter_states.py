@@ -9,6 +9,9 @@ def main():
         print("Usage: script.py <username> <password> <database>")
         sys.exit(1)
     username, password, database = sys.argv[1:]
+    username = 'root'
+    password = '1111'
+    database = 'hbtn_0e_0_usa'
     conn = MySQLdb.connect(
         host="localhost", user=username, password=password, db=database
     )
@@ -16,8 +19,7 @@ def main():
     cur.execute(
         "SELECT * FROM states \
             WHERE name LIKE 'N%' \
-            ORDER BY id ASC \
-            LIMIT 2")
+            ORDER BY id ASC LIMIT 2")
     items = cur.fetchall()
     for item in items:
         print(item)
