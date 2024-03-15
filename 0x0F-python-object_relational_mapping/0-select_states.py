@@ -9,12 +9,13 @@ def main():
 		sys.exit(1)
 	username, password, database = sys.argv[1:]
 	conn = MySQLdb.connect(host='localhost',
-                        user='root',
-                        password='1111',
+                        user=username,
+                        password=password,
                         db=database
                         )
 	cur = conn.cursor()
-	cur.execute("SELECT * FROM states")
+	cur.execute("SELECT * FROM states \
+				ORDER BY id ASC")
 	items = cur.fetchall()
 	for item in items:
 		print(item)
