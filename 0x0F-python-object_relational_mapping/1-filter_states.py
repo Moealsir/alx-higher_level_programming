@@ -16,7 +16,7 @@ def main():
     cur.execute(
         "SELECT * FROM states \
             WHERE name LIKE 'N%' \
-            ORDER BY id ASC LIMIT 2")
+            ORDER BY id")
     items = cur.fetchall()
     for item in items:
         print(item)
