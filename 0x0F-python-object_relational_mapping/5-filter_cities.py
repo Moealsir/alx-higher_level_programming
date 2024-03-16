@@ -6,19 +6,23 @@ import sys
 
 def main():
     username, password, database, state = sys.argv[1:]
+    username='root'
+    password='1111'
+    database='hbtn_0e_4_usa'
     conn = MySQLdb.connect(
         host="localhost", user=username, password=password, db=database
     )
     cur = conn.cursor()
-    query = f"SELECT cities.name \
+    query = "SELECT cities.name \
         FROM cities \
         JOIN states ON cities.state_id = states.id \
-        WHERE states.name = {state} \
+        WHERE states.name = %s \
         ORDER BY cities.id ASC"
-    cur.execute(query)
-    items = cur.fetchall()
-    for item in items:
-        print(item)
+    cur.execute(query, (state,))
+    cities = [row[0] for row in cur.fetchall()]
+
+    # Print the results as comma-separated string
+    print(', '.join(cities))
     cur.close()
     conn.close()
 
