@@ -14,7 +14,8 @@ def main():
         host="localhost", user=username, password=password, db=database
     )
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(state))
+    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
+    cur.execute(query, (state,))
     items = cur.fetchall()
     for item in items:
         print(item)
