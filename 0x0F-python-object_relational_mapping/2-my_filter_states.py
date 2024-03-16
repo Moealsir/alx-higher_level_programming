@@ -10,16 +10,11 @@ def main():
             database state_name".format(sys.argv[0]))
         sys.exit(1)
     username, password, database, state = sys.argv[1:]
-    username='root'
-    password='1111'
-    database='hbtn_0e_0_usa'
-    state = 'Arizona'
     conn = MySQLdb.connect(
         host="localhost", user=username, password=password, db=database
     )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE BINARY name = %s ORDER BY id ASC"
-    cur.execute(query, (state,))
+    cur.execute("SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(state))
     items = cur.fetchall()
     for item in items:
         print(item)
