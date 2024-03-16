@@ -6,9 +6,6 @@ import sys
 
 def main():
     username, password, database, state = sys.argv[1:]
-    username='root'
-    password='1111'
-    database='hbtn_0e_4_usa'
     conn = MySQLdb.connect(
         host="localhost", user=username, password=password, db=database
     )
