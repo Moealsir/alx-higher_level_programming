@@ -14,7 +14,7 @@ def main():
         host="localhost", user=username, password=password, db=database
     )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC LIMIT 1"
     cur.execute(query, (state,))
     items = cur.fetchall()
     for item in items:
