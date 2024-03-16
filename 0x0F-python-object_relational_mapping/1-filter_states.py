@@ -14,7 +14,7 @@ def main():
     cur = conn.cursor()
     cur.execute(
         "SELECT * FROM states \
-            WHERE name LIKE 'N%' \
+            WHERE name LIKE BINARY 'N%' \
             ORDER BY id")
     items = cur.fetchall()
     for item in items:
