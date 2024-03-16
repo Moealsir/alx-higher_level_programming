@@ -8,10 +8,6 @@ def main():
         print("Usage: script.py <username> <password> <database>")
         sys.exit(1)
     username, password, database, state = sys.argv[1:]
-    username = 'root'
-    password = '1111'
-    database = 'hbtn_0e_0_usa'
-    state = 'Arizona'
     conn = MySQLdb.connect(
         host="localhost", user=username, password=password, db=database
     )
