@@ -3,7 +3,6 @@
 import MySQLdb
 import sys
 
-
 def main():
     if len(sys.argv) != 4:
         print("Usage: script.py <username> <password> <database>")
