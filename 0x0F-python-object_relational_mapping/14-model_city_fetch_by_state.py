@@ -20,9 +20,10 @@ def main():
     with engine.connect() as conn:
         query = sql.select(State.name, City.id, City.name).\
             join(City, State.id == City.state_id).order_by(City.id)
-        result = conn.execute(query).fetchall()
+        result = conn.execute(query)
+        result = result.fetchall()
         for row in result:
-            print(f'{row[0]}: ({row[1]}) {row[2]}')
+            print("{}: ({}) {}".format(row[0], row[1], row[2]))
 
 
 if __name__ == "__main__":
