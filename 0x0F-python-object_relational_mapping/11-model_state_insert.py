@@ -8,7 +8,7 @@ import sys
 
 
 def main():
-    username, password, database  = sys.argv[1:]
+    username, password, database = sys.argv[1:]
     engine = sql.create_engine(
         "mysql://{}:{}@localhost:\
         3306/{}".format(
