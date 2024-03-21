@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """lists all State objects from the database hbtn_0e_6_usa"""
-from model_state import Base, state
+from model_state import Base, State
 import sqlalchemy as sql
 from sqlalchemy.ext.declarative import declarative_base
 import sys
@@ -13,7 +13,7 @@ def main():
     Base.metadata.create_all(engine)
 
     with engine.connect() as conn:
-        result = conn.execute(sql.select(state).order_by(state.id))
+        result = conn.execute(sql.select(State).order_by(State.id))
         row = result.fetchmany()
         try:
             print("{}: {}".format(row[0], row[1]))
