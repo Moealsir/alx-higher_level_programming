@@ -14,7 +14,7 @@ def main():
 
     with engine.connect() as conn:
         result = conn.execute(sql.select(State).order_by(State.id))
-        row = result.fetchmany()
+        row = result.fetchone()
         try:
             print("{}: {}".format(row[0], row[1]))
         except TypeError:
