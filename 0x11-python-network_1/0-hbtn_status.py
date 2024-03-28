@@ -1,6 +1,6 @@
 import urllib
 import urllib.request
-
+"""Fetches and displays the body of the response"""
 
 if __name__ == "__main__":
     url = 'https://intranet.hbtn.io/status'
