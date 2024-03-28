@@ -1,8 +1,6 @@
 import urllib
 import urllib.request
 
-def main():
-    pass
 
 if __name__ == "__main__":
     url = 'https://intranet.hbtn.io/status'
