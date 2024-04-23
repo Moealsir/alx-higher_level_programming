@@ -5,7 +5,7 @@ const request = require('request');
 const apiUrl = process.argv[2];
 const characterID = '18';
 
-function countMoviesWithWedge(apiUrl, characterID, callback) {
+function countMoviesWithWedge (apiUrl, characterID, callback) {
   request(apiUrl, (error, response, body) => {
     if (error) {
       callback(new Error(error), null);
