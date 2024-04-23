@@ -1,17 +1,17 @@
 #!/usr/bin/node
-// test
-
-const { writeFile } = require('fs');
 const { get } = require('request');
-const apiUrl = process.argv[2];
-const filepath = process.argv[3];
+const { writeFile } = require('fs');
+const { argv } = require('process');
 
-get(apiUrl, (err, body) => {
+const url = argv[2];
+const filename = argv[3];
+
+get(url, (err, res, body) => {
   if (err) {
     console.log(err);
     return;
   }
-  writeFile(filepath, body, 'utf8', err => {
+  writeFile(filename, body, 'utf8', err => {
     if (err) {
       console.log(err);
     }
